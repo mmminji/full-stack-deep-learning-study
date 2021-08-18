@@ -6,7 +6,7 @@
 코드 : [https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs](https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs)
 
 
-1. Requirement(fullstack)
+## 1. Requirement(fullstack)
 ```
 python=3.6
 numpy
@@ -17,7 +17,7 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f htt
 ```
 
 
-2. Contents  
+## 2. Contents  
 Lab 1: Intro: Formulate problem, structure codebase, train an MLP for MNIST.  
 Lab 2: CNNs: Introduce EMNIST, generate synthetic handwritten lines, and train CNNs.  
 Lab 3: RNNs: Using CNN + LSTM with CTC loss for line text recognition.  
