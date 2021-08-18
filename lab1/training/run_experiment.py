@@ -7,6 +7,8 @@ import torch
 import pytorch_lightning as pl
 import wandb
 
+import sys
+sys.path.append('C:/Users/a/OneDrive - 고려대학교/GITHUB/full-stack-deep-learning-study/lab1')
 from text_recognizer import lit_models
 
 
