@@ -1,0 +1,10 @@
+requirements/
+setup/
+environment.yml
+LICENSE.txt
+Makefile
+data/
+lab1/lightning_logs/*
+lab1/training/logs/*
+lab2/notebooks/lightning_logs/*
+lab2/training/logs/*
