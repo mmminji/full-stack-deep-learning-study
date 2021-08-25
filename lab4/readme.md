@@ -45,5 +45,6 @@ There is also an opportunity to speed up the `predict` method that you could try
 `ctc.py` line 50, 51, 52 : accuracy 오버라이딩  
 `transformer.py` line 30, 31, 32 : accuracy 오버라이딩  
 `transformer.py` line 44, 52, 63 : y = y.long() 타입 변경  
+`transformer.py` line 58, 59, 67, 68 : acc 출력  
 `run_experiment.py` line 10,11 : sys 설정 추가  
 `run_experiment.py` line 98 : progress_bar_refresh_rate=0 추가  
