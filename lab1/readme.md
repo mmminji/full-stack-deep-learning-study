@@ -126,3 +126,7 @@ And watch the model fail to achieve high accuracy due to too few parameters :)
 
 - Try `training/run_experiment.py` with different MLP hyper-parameters (e.g. `--fc1=128 --fc2=64`).
 - Try editing the MLP architecture in `text_recognizers/models/mlp.py`
+
+## fix 
+`run_experiment.py` line 10,11 : sys 설정 추가
+`run_experiment.py` line 94 : progress_bar_refresh_rate=0 추가
