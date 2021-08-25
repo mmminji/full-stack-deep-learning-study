@@ -25,7 +25,7 @@ pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f htt
 ## 2. Contents  
 Lab 1: Intro: Formulate problem, structure codebase, train an MLP for MNIST.[>실험](https://github.com/mmminji/full-stack-deep-learning-study/blob/master/lab1/lab1.ipynb)  
 Lab 2: CNNs: Introduce EMNIST, generate synthetic handwritten lines, and train CNNs.[>실험](https://github.com/mmminji/full-stack-deep-learning-study/blob/master/lab2/lab2.ipynb)  
-Lab 3: RNNs: Using CNN + LSTM with CTC loss for line text recognition.  
+Lab 3: RNNs: Using CNN + LSTM with CTC loss for line text recognition.[>실험](https://github.com/mmminji/full-stack-deep-learning-study/blob/master/lab3/lab3.ipynb)  
 Lab 4: Transformers: Using Transformers for line text recognition.  
 Lab 5: Experiment Management: Real handwriting data, Weights & Biases, and hyperparameter sweeps.  
 Lab 6: Data Labeling: Label our own handwriting data and properly store it.  
