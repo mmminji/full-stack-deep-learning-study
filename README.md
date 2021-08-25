@@ -11,7 +11,10 @@
 python=3.6
 numpy
 pillow
+matplotlib
+h5py
 smart_open
+toml
 pip install boltons wandb pytorch_lightning==1.1.4
 pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
