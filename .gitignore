@@ -3,7 +3,8 @@ setup/
 environment.yml
 LICENSE.txt
 Makefile
-data/
+data/downloaded
+data/processed
 */*/__pycache__
 */*/*/__pycache__
 lab1/lightning_logs
@@ -13,3 +14,5 @@ lab2/training/logs
 lab3/notebooks/lightning_logs
 lab3/training/logs
 lab4/training/logs
+lab5/training/logs
+lab5/wandb
