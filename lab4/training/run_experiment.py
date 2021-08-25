@@ -7,6 +7,8 @@ import torch
 import pytorch_lightning as pl
 import wandb
 
+import sys
+sys.path.append('C:/Users/a/OneDrive - 고려대학교/GITHUB/full-stack-deep-learning-study/lab4')
 from text_recognizer import lit_models
 
 
@@ -97,7 +99,7 @@ def main():
     callbacks = [early_stopping_callback, model_checkpoint_callback]
 
     args.weights_summary = "full"  # Print full summary of the model
-    trainer = pl.Trainer.from_argparse_args(args, callbacks=callbacks, logger=logger, weights_save_path="training/logs")
+    trainer = pl.Trainer.from_argparse_args(args, callbacks=callbacks, logger=logger, weights_save_path="training/logs", progress_bar_refresh_rate=0)
 
     # pylint: disable=no-member
     trainer.tune(lit_model, datamodule=data)  # If passing --auto_lr_find, this will set learning rate

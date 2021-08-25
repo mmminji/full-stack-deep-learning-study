@@ -3,7 +3,7 @@ try:
     import wandb
 except ModuleNotFoundError:
     pass
-
+import pytorch_lightning as pl
 
 from .metrics import CharacterErrorRate
 from .base import BaseLitModel
@@ -25,7 +25,12 @@ class TransformerLitModel(BaseLitModel):  # pylint: disable=too-many-ancestors
         end_index = inverse_mapping["<E>"]
         padding_index = inverse_mapping["<P>"]
 
-        self.loss_fn = nn.CrossEntropyLoss(ignore_index=padding_index)
+        # self.loss_fn = nn.CrossEntropyLoss(ignore_index=padding_index)
+        self.loss_fn = nn.CrossEntropyLoss()
+
+        self.train_acc = pl.metrics.Accuracy()
+        self.val_acc = pl.metrics.Accuracy()
+        self.test_acc = pl.metrics.Accuracy()
 
         ignore_tokens = [start_index, end_index, padding_index]
         self.val_cer = CharacterErrorRate(ignore_tokens)
@@ -36,6 +41,7 @@ class TransformerLitModel(BaseLitModel):  # pylint: disable=too-many-ancestors
 
     def training_step(self, batch, batch_idx):  # pylint: disable=unused-argument
         x, y = batch
+        y = y.long()
         logits = self.model(x, y[:, :-1])
         loss = self.loss_fn(logits, y[:, 1:])
         self.log("train_loss", loss)
@@ -43,6 +49,7 @@ class TransformerLitModel(BaseLitModel):  # pylint: disable=too-many-ancestors
 
     def validation_step(self, batch, batch_idx):  # pylint: disable=unused-argument
         x, y = batch
+        y = y.long()
         logits = self.model(x, y[:, :-1])
         loss = self.loss_fn(logits, y[:, 1:])
         self.log("val_loss", loss, prog_bar=True)
@@ -53,6 +60,7 @@ class TransformerLitModel(BaseLitModel):  # pylint: disable=too-many-ancestors
 
     def test_step(self, batch, batch_idx):  # pylint: disable=unused-argument
         x, y = batch
+        y = y.long()
         pred = self.model.predict(x)
         self.test_cer(pred, y)
         self.log("test_cer", self.test_cer, on_step=False, on_epoch=True, prog_bar=True)
