@@ -6,7 +6,7 @@
 코드 : [https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs](https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs)
 
 
-## 1. Requirement(fullstack)
+## 1. Requirement(fsdl)
 ```
 python=3.6
 numpy
@@ -16,6 +16,7 @@ h5py
 smart_open
 toml
 nltk
+editdistance
 pip install boltons wandb pytorch_lightning==1.1.4
 pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
