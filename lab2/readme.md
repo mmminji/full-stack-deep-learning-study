@@ -121,6 +121,6 @@ Some other things to try:
 
 
 ## fix
-`base.py` line 78, 88, 97 : y = y.long() 타입 변경
-`run_experiment.py` line 10,11 : sys 설정 추가
-`run_experiment.py` line 94 : progress_bar_refresh_rate=0 추가
+`base.py` line 78, 88, 97 : y = y.long() 타입 변경  
+`run_experiment.py` line 10,11 : sys 설정 추가  
+`run_experiment.py` line 94 : progress_bar_refresh_rate=0 추가  

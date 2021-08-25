@@ -181,8 +181,8 @@ Feel free to edit `LineCNNLSTM` as well, get crazy with LSTM stuff!
 In your own words, explain how the `CharacterErrorRate` metric and the `greedy_decode` method work.
 
 ## fix
-`base.py` line 78, 88, 97 : y = y.long() 타입 변경
-`base.py` line 24 : dim=1
-`ctc.py` line 50, 51, 52 : accuracy 오버라이딩
-`run_experiment.py` line 10,11 : sys 설정 추가
-`run_experiment.py` line 98 : progress_bar_refresh_rate=0 추가
+`base.py` line 78, 88, 97 : y = y.long() 타입 변경  
+`base.py` line 24 : dim=1  
+`ctc.py` line 50, 51, 52 : accuracy 오버라이딩  
+`run_experiment.py` line 10,11 : sys 설정 추가  
+`run_experiment.py` line 98 : progress_bar_refresh_rate=0 추가  
