@@ -5,13 +5,13 @@ command:
   - "--wandb"
   - ${args}
 program: training/run_experiment.py
-method: random
+method: random  # grid / bayes
 metric:
   goal: minimize
   name: val_loss
 early_terminate:
   type: hyperband
-  min_iter: 20
+  min_iter: 60
 parameters:
   conv_dim:
     values: [32, 64]
@@ -31,6 +31,8 @@ parameters:
     values: [2, 4, 6]
   lr:
     values: [0.01, 0.001, 0.0003]
+    # min : 0.0001
+    # max : 0.1
   num_workers:
     value: 20
   gpus:

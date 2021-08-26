@@ -132,3 +132,12 @@ You can also stop a sweep from the W&B web app UI, or directly from the terminal
 - Try to find a settings of hyperparameters for `LineCNNTransformer` (don't forget -- it includes `LineCNN` hyperparams) that trains fastest while reaching low CER
 - Perhaps do that by running a sweep!
 - Try some experiments with `LineCNNLSTM` if you want
+
+## fix
+`transformer.py` line 30, 31, 32 : accuracy 오버라이딩  
+`transformer.py` line 43, 51, 69 : y = y.long() 타입 변경  
+`transformer.py` line 64, 65, 80, 81 : acc 출력  
+`run_experiment.py` line 10,11 : sys 설정 추가  
+`run_experiment.py` line 111 : progress_bar_refresh_rate=0 추가  
+`iam_lines.py` line 17,18 : sys 설정 추가  
+`emnist_lines2.py` line 222 : transforms.ToTensor() 추가 및 line 227 삭제  
