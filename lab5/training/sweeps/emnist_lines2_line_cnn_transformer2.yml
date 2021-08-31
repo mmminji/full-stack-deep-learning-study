@@ -45,5 +45,5 @@ parameters:
     value: transformer
   precision:
     value: 16
-  epoch:
+  max_epochs:
     value: 40
