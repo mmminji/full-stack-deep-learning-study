@@ -36,7 +36,8 @@ class IAMOriginalAndSyntheticParagraphs(BaseDataModule):
 
         self.data_train = ConcatDataset([self.iam_paragraphs.data_train, self.iam_syn_paragraphs.data_train])
         self.data_val = self.iam_paragraphs.data_val
-        self.data_test = self.iam_paragraphs.data_test
+        if stage == 'test' or stage is None:
+            self.data_test = self.iam_paragraphs.data_test
 
     # TODO: can pass multiple dataloaders instead of concatenation datasets
     # https://pytorch-lightning.readthedocs.io/en/latest/advanced/multiple_loaders.html#multiple-training-dataloaders

@@ -14,6 +14,8 @@ from PIL import Image, ImageFile, ImageOps
 import numpy as np
 from torchvision import transforms
 
+import sys
+sys.path.append('C:/Users/a/OneDrive - 고려대학교/GITHUB/full-stack-deep-learning-study/lab7')
 from text_recognizer.data.util import BaseDataset, convert_strings_to_labels, split_dataset
 from text_recognizer.data.base_data_module import BaseDataModule, load_and_print_info
 from text_recognizer.data.emnist import EMNIST

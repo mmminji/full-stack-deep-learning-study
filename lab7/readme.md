@@ -154,3 +154,13 @@ The file for this is `text_recognizer/paragraph_text_recognizer.py`
 Check out the new files, and perhaps try training yourself!
 
 Next time, we will add tests for our new recognizer class, as well as some evaluation tests, and a test of the training system.
+
+## fix
+`transformer.py` line 30, 31, 32 : accuracy 오버라이딩  
+`transformer.py` line 43, 51, 69 : y = y.long() 타입 변경  
+`transformer.py` line 64, 65, 80, 81 : acc 출력  
+`run_experiment.py` line 10,11 : sys 설정 추가  
+`run_experiment.py` line 111 : progress_bar_refresh_rate=0 추가  
+`iam_lines.py` line 17,18 : sys 설정 추가  
+`iam_original_and_synthetic_paragraphs.py` line 39 : data_test error  
+`resnet_transformer.py` line 176 : output_tokens[:, Sy] = output[-1:] 로 변경  
