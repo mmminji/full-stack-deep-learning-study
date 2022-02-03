@@ -1,6 +1,6 @@
 # Full Stack Deep Learning Study
 ### 가짜연구소 3기
-#### 2021년 7월 21일 ~ 진행중
+#### 2021년 7월 21일 ~ 11월 3일
 
 강의 : [https://fullstackdeeplearning.com/](https://fullstackdeeplearning.com/)  
 코드 : [https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs](https://github.com/full-stack-deep-learning/fsdl-text-recognizer-2021-labs)
