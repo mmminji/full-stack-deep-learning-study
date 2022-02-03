@@ -1,5 +1,5 @@
 # Full Stack Deep Learning Study
-### 가짜연구소 3기
+### 가짜연구소 3기 스터디
 #### 2021년 7월 21일 ~ 11월 3일
 
 강의 : [https://fullstackdeeplearning.com/](https://fullstackdeeplearning.com/)  
